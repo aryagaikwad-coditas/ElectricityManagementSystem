@@ -1,4 +1,4 @@
-package com.example.ElectricityManagementSystem.dto;
+package com.example.ElectricityManagementSystem.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginResponse {
-    private String token;
-    private String role;
+public class LoginRequest {
     private String email;
+    private String password;
 }
