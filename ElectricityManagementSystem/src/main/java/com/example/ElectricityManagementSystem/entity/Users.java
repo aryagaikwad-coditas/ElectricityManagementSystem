@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -33,5 +35,20 @@ public class Users {
 
     private String phone;
 
-    private Set<Role> roles;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_roles"
+            ,schema="master"
+            ,joinColumns = @JoinColumn(name = "user_id")
+            ,inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "created_by")
+    private Users createdBy;
+
+    @Column(nullable = false)
+    private LocalDateTime createdAt =  LocalDateTime.now();
+
+    @Column(nullable = false)
+    private boolean active = true;
 }
