@@ -1,4 +1,4 @@
-package com.example.ElectricityManagementSystem.entity;
+package com.example.ElectricityManagementSystem.entity.master;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,16 +9,19 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "cities",schema = "master")
-public class City {
+@Table(name = "areas",schema = "master")
+public class Area {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false)
     private String name;
 
+    private Long pinCode;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "district_id")
-    private District district;
+    @JoinColumn(name = "city_id")
+    private City city;
 }

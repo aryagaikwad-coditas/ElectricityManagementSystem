@@ -1,6 +1,6 @@
 package com.example.ElectricityManagementSystem.config.tenant;
 
-import com.example.ElectricityManagementSystem.repository.ClientRepository;
+import com.example.ElectricityManagementSystem.repository.master.ClientRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.example.ElectricityManagementSystem.entity;
+package com.example.ElectricityManagementSystem.entity.master;
 
 import com.example.ElectricityManagementSystem.enums.ClientStatus;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.example.ElectricityManagementSystem.entity;
+package com.example.ElectricityManagementSystem.entity.master;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,9 +8,10 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "state",schema = "master")
 @Builder
-@Table(name = "districts",schema = "master")
-public class District {
+public class State {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +19,6 @@ public class District {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "state_id",nullable = false)
-    private State state;
+    @Column(nullable=false)
+    private String code; // eg gujarat -> gj kiva maharashtra -> mh
 }

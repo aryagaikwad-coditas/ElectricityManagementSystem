@@ -1,4 +1,4 @@
-package com.example.ElectricityManagementSystem.entity;
+package com.example.ElectricityManagementSystem.entity.master;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
-package com.example.ElectricityManagementSystem.repository;
+package com.example.ElectricityManagementSystem.repository.master;
 
-import com.example.ElectricityManagementSystem.entity.Users;
+import com.example.ElectricityManagementSystem.entity.master.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

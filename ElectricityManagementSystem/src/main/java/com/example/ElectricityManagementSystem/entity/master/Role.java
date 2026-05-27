@@ -1,8 +1,7 @@
-package com.example.ElectricityManagementSystem.entity;
+package com.example.ElectricityManagementSystem.entity.master;
 
 import com.example.ElectricityManagementSystem.enums.RoleType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NegativeOrZero;
 import lombok.*;
 
 @Entity
