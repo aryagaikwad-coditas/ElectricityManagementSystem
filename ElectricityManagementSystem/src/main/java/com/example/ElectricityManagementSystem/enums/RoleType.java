@@ -4,5 +4,10 @@ public enum RoleType {
     OWNER,
     MANAGEMENT,
     SALES,
-    CRM
+    CRM,
+    STATE_HEAD,
+    DISTRICT_HEAD,
+    CITY_HEAD,
+    TECHNICIAN,
+    BILLER
 }
