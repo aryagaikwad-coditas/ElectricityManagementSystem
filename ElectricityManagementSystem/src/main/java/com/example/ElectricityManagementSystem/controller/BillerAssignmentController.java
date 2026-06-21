@@ -20,7 +20,7 @@ public class BillerAssignmentController {
 
     @GetMapping("/available")
     public ResponseEntity<ApiResponse<List<AvailableBillerResponse>>> getAvailableBiller(@RequestParam Long cityId){
-        return ResponseEntity.ok(ApiResponse.success("Fetching all the available billers ", getAvailableBiller(cityId)));
+        return ResponseEntity.ok(ApiResponse.success("Fetching all the available billers ", (List<AvailableBillerResponse>) getAvailableBiller(cityId)));
     }
 
     @PostMapping("/assign")
